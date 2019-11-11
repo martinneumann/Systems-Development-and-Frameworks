@@ -1,5 +1,4 @@
-import List from "./components/List.js";
-import ListItem from "./components/ListItem.js";
+import Vue from "vue";
 
 new Vue({
   el: "#app",

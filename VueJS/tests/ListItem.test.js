@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import TodoItem from "@/components/TodoItem";
+import TodoItem from "../../1/components/ListItem.js";
 
 const wrapper = shallowMount(TodoItem, {
   propsData: {

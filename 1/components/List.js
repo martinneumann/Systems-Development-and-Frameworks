@@ -1,6 +1,8 @@
 /**
  * List component
  */
-export default Vue.component('list', {
-    template: '<ul></ul>'
-})
+import Vue from "vue";
+
+export default Vue.component("list", {
+  template: "<ul></ul>"
+});
