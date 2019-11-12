@@ -3,43 +3,23 @@ import TodoItem from "../../1/components/ListItem.js";
 
 const wrapper = shallowMount(TodoItem, {
   propsData: {
-    todo: {
-      id: 1,
-      message: "todo.text"
-    }
+    id: "1",
+    message: "test Text"
   }
 });
 
 describe("TodoItem", () => {
-  it("renders todo.text", () => {
-    expect(wrapper.html()).toContain("todo.text");
+  test("is vue instance", () => {
+    expect(wrapper.isVueInstance()).toBeTruthy();
   });
-  it("does not show input field", () => {
-    expect(wrapper.contains("input")).toBe(false);
+  test("renders correctly", () => {
+    expect(wrapper.element).toMatchSnapshot();
   });
-
-  describe("click on edit button", () => {
-    it("does show input field", () => {
-      wrapper.find("#edit").trigger("click");
-
-      expect(wrapper.contains("input")).toBe(true);
-    });
-
-    describe("edit text and submit", () => {
-      it("$emits save with edited todo", () => {
-        // wrapper.find("input").setValue("edited.todo.text");
-        wrapper.find("#save").trigger("click");
-
-        expect(wrapper.emitted()).toBeTruthy();
-      });
-    });
+  test("contains the message", () => {
+    expect(wrapper.html()).toContain("test Text");
   });
-
-  describe("click on edit button", () => {
-    it("$emits delete", () => {
-      wrapper.find("#delete").trigger("click");
-
-      expect(wrapper.emitted()).toBeTruthy();
-    });
+  test("showEdit changes visibility", () => {
+    wrapper.vm.showEditForm();
+    expect(wrapper.vm.isHidden).toBe(false);
   });
 });
