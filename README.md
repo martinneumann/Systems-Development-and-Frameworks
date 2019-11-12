@@ -3,4 +3,8 @@
 | Github Alias                                         | Name         |
 | ---------------------------------------------------- | ------------ |
 | [@martinneumann](https://github.com/martinneumann)   | Martin N.    |
+| [@rico-stucke](https://github.com/rico-stucke)   | Rico S.    |
 
+
+
+https://travis-ci.com/martinneumann/Systems-Development-and-Frameworks.svg?branch=master
