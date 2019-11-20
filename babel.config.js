@@ -8,6 +8,11 @@ module.exports = {
           node: "current"
         }
       }
+    ],
+    [
+      (module.exports = {
+        presets: ["@vue/app"]
+      })
     ]
   ]
 };
